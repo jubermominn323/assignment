@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap');
+.navbar{
+    position: sticky;
+    box-sizing: border-box;
+    padding: 5px;
+    width: 90%;
+    margin: auto;
+    background-color: tomato;
+}
+
+.navbar img{
+    border: white;
+}
+
+.navbar span{
+    margin: 10px 10px;
+    cursor: pointer;
+}
+
+.navbar b{
+    position: relative;
+}

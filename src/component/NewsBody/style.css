@@ -1,0 +1,19 @@
+a{
+    color:black;
+    text-decoration: none;
+}
+.main {
+    position: relative;
+    width: 90%;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 5px;
+    border: 1px solid red;
+}
+
+.row {
+    position: relative;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 5px;
+}

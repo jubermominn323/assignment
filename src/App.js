@@ -1,25 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
+import {BrowserRouter,Route,Switch} from 'react-router-dom'
+import NewsBody from './component/NewsBody/newsBody'
+import NewsBar from './component/NewsBar/newsBar';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+    	<Switch>
+			<Route path='/NewsBar' component={NewsBar} />
+    		<Route path='/' exact component={NewsBody} />
+      	</Switch>
+    </BrowserRouter>
+      
+    
   );
 }
 
