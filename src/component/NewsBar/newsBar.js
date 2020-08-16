@@ -1,30 +1,20 @@
-import React,{useState} from 'react'
+import React from 'react'
+import {Link} from 'react-router-dom'
 import './newsBar.css'
 
 const NewsBar = ( ) => {
-    const [data, setData] = useState([])
-    const showNews = (topic) =>{
-        fetch(`https://gnews.io/api/v3/topics/${topic}?token=ffb0599e377c44b230368f870b6ea436`)
-        .then(res => res.json())
-        .then(result =>{
-            setData(result)
-            console.log(result)
-        })
-        
-    }
     return (
         <nav className="navbar sticky-top" >
             <div style={{position:"relative"}}>
-            <span onClick={()=>showNews('world')}>World</span>|
-            <span onClick={()=>showNews('nation')}>Nation</span>|
-            <span onClick={()=>showNews('business')}>Business</span>|
-            <span onClick={()=>showNews('technology')}>Technology</span>|
-            <span onClick={()=>showNews('entertainment')}>Entertainment</span>|
-            <span onClick={()=>showNews('sports')}>Sports</span>|
-            <span onClick={()=>showNews('science')}>Science</span>|
-            <span onClick={()=>showNews('health')}>Health</span>|
+            <Link to="/WorldNews"><span>World</span></Link>|
+            <Link to="/NationNews"><span>Nation</span></Link>|
+            <Link to="/BusinessNews"><span>Business</span></Link>|
+            <Link to="/TechnologyNews"><span>Technology</span></Link>|
+            <Link to="/EntertainmentNews"><span>Entertainment</span></Link>|
+            <Link to="/SportsNews"><span>Sports</span></Link>|
+            <Link to="/ScienceNews"><span>Science</span></Link>|
+            <Link to="/HealthNews"><span>Health</span></Link>|
             </div>
-            
         </nav>
         
     )
