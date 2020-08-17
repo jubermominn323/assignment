@@ -1,9 +1,8 @@
 import React,{useState, useEffect} from 'react'
 import NewsBar from '../newsBar'
 
-const WorldNews = ( ) => {
+const WorldNews = (  ) => {
     const [data, setData] = useState([])
-
     useEffect(()=>{
         fetch(`https://gnews.io/api/v3/topics/world?token=ffb0599e377c44b230368f870b6ea436`)
         .then(res => res.json())
@@ -12,6 +11,7 @@ const WorldNews = ( ) => {
             console.log(result)
         })
     },[])
+    
     return (
         <div>
             <div>
