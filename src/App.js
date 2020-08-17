@@ -9,9 +9,9 @@ import TechnologyNews from './component/NewsBar/WorldNews/TechnologyNews'
 import ScienceNews from './component/NewsBar/WorldNews/ScienceNews'
 import HealthNews from './component/NewsBar/WorldNews/HealthNews'
 import SportsNews from './component/NewsBar/WorldNews/SportsNews'
-import WholePage from './component/NewsBody/WholePage/WholePage';
 
 import './App.css';
+import NewsBody from './component/NewsBody/newsBody';
 
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
     <BrowserRouter>
     	<Switch>
 			<Route path='/NewsBar' component={NewsBar} />
-    		<Route path='/' exact component={WholePage} />
+    		<Route path='/' exact component={NewsBody} />
         <Route path="/WorldNews" component={WorldNews} />
         <Route path="/NationNews" component={NationNews} />
         <Route path="/BusinessNews" component={BusinessNews} />

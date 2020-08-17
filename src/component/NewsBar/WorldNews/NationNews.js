@@ -5,7 +5,7 @@ const NationNews = ( ) => {
     const [data, setData] = useState([])
 
     useEffect(()=>{
-        fetch(`https://gnews.io/api/v3/topics/nation?token=6ca352be4cdd3daf22875c9d022dd2b2`)
+        fetch(`https://gnews.io/api/v3/topics/nation?token=ffb0599e377c44b230368f870b6ea436`)
         .then(res => res.json())
         .then(result =>{
             setData(result.articles)
